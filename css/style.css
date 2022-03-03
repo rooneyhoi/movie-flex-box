@@ -1,0 +1,443 @@
+/* GLOBAL VARIABLES */
+:root {
+	--yellow-color: #F6D200;
+	--main-background-color: #EDEDED;
+}
+
+/* BASE STYLE */
+body,
+button,
+input,
+textarea {
+	color: black;
+	font-family: 'Asap', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+body {
+	background-color: var(--main-background-color);
+	margin: 0;
+	font-family: 'Asap', sans-serif;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+footer {
+    background-color: black;
+    color: white;
+		text-align: center;
+		padding: 1.5em;
+		font-size: 1.2em;
+		font-weight: 700;
+}
+
+header {
+	background-color: black;
+}
+
+.sidebar-right {
+	background-color: var(--main-background-color);
+	color: white
+}
+
+h1 {
+	color: red;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+@media screen and (min-width: 1120px) {
+
+	.content-area {
+		display: flex;
+	}
+
+	/* 0: no grow, 0:won't shrink, 320px basic width  */
+	.sidebar-right {
+		flex: 0 0 320px;
+	}
+}
+
+/* START the header style  */
+.site-header {
+	height: 400px;
+	display: flex;
+	flex-flow: column;
+}
+
+.site-info {
+	flex-grow: 1;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+.site-title {
+	margin: 0;
+	font-size: 2em;
+	font-weight: 300;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+}
+
+.site-description {
+	text-align: center;
+	color: var(--yellow-color);
+	font-size: 1.2em;
+	margin-top: -.8;
+	font-style: italic;
+}
+
+.main-menu {	
+	color: black;
+	background-color: var(--yellow-color);
+}
+
+.main-menu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;	
+}
+
+.main-menu li a {
+	text-decoration: none;
+	color: black;
+	font-size: 1.1em;
+	font-weight: 700;
+	padding: .6em 1em;
+	display: block;
+	transition: all .5s ease;
+}
+
+.main-menu li a:hover {
+	background-color: black;
+	color: var(--yellow-color);
+}
+
+@media screen and (min-width: 810px) {
+
+	.main-menu ul {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+
+	.main-menu ul li {
+		flex-grow: 1;
+		flex-basis: auto;
+		flex-shrink: 0;
+	}
+
+}
+
+@media screen and (min-width: 1120px) {
+	.site-title {
+		font-size: 4em;
+	}
+}
+
+/* END of the header style */
+
+/* START the post styles  */
+
+.main-content-area {
+	padding: 2em;
+}
+
+.post {
+	background-color: white;
+	margin-bottom: 1em;
+}
+
+.post a {
+	color: black;
+	text-decoration: none;
+}
+
+.post-content {
+	padding: 0 40px 20px;
+}
+
+.post-content h2 {
+	background-color: var(--yellow-color);
+	color: black;
+	padding: 20px;
+	text-align: center;
+	margin: 0 -40px 30px;
+}
+
+@media screen and (min-width: 810px) {
+	
+	.posts {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.post {
+		flex-basis: 49%;
+	}
+}
+
+@media screen and (min-width: 1120px) {
+
+	.post-one-third {
+		flex-basis: 32%;
+	}
+
+	.post-half {
+		flex-basis: 49%;
+	}
+
+	.post-full {
+		flex-basis: 100%;
+	}
+
+}
+
+/* END the post styles  */
+
+/* START watch section styles  */
+
+.section-header {
+	color: black;
+	font-size: 3em;
+	text-align: center;
+}
+
+.watch-card {
+	margin-bottom: 1em;
+}
+
+.watch-content {
+	background-color: black;
+	color: white;
+	padding: 3em;
+}
+
+.watch-content h2 {
+	font-size: 2em;
+	font-weight: 300;
+	margin: 0;
+	text-transform: capitalize;
+}
+
+.movie-info {
+	font-weight: 700;
+}
+
+.movie-info span {
+	padding-right: 1.5em;
+}
+
+.movie-story {
+	margin: 1em 0;
+}
+
+.watch-content a {
+	color: white;
+	font-weight: 700;
+}
+
+@media screen and (min-width: 810px) {
+
+	.watch-card {
+		display: flex;
+	}
+	
+	.watch-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.img-right {
+		order: 1;
+	}
+}
+/* END watch section styles  */
+
+/* START download section styles  */
+
+.download-card {
+	margin-bottom: 1em;
+}
+
+.download-content {
+	background-color: white;	
+}
+
+.download-content a {
+	background-color: black;
+	color: white;
+	padding: 1em 2em;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+.download-content a i {
+	font-size: 1.5em;
+}
+
+.download-info {
+	padding: 1em 2em;
+}
+
+.download-info h4 {
+	margin: 0;
+}
+
+.download-info p {
+	margin: 0;
+	font-size: .9em;
+}
+
+.download-cast img {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+}
+
+.download-rating {
+	background-color: var(--yellow-color);
+	padding: 1em, 2em;
+	color: black;
+	font-size: .9em;
+}
+
+.download-rating .rate {
+	font-size: 2.5em;
+	font-weight: 700;
+	margin-bottom: -.25em;
+}
+
+/* style for the flex display */
+.download-content {
+	display: flex;
+	flex-flow: column;
+}
+
+.download-content a, .download-rating {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.download-genre, .download-cast {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+}
+
+.download-info h4 {
+	flex-basis: 20%;
+}
+
+@media screen and (min-width: 810px) {
+
+	.download-content {
+		display: flex;
+		flex-flow: row;		
+	}
+
+	.download-content a, .download-rating {
+		flex-grow: 1;
+	}
+
+	.download-info {
+		flex-grow: 2;		
+	}
+
+}
+/* END download section styles  */
+
+/* START gallery section styles  */
+
+.gallery-imgs {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -8px;
+}
+
+.gallery-img {
+	height: 250px;
+	flex-grow: 1;
+	margin: 0 0 8px 8px;
+}
+
+.gallery-img img {
+	height: 100%;
+	object-fit: cover;
+}
+
+.gallery-img:nth-child(4n+1){
+	flex-basis: 250px;
+}
+
+.gallery-img:nth-child(4n+2){
+	flex-basis: 325px;
+}
+
+.gallery-img:nth-child(4n+3){
+	flex-basis: 180px;
+}
+
+.gallery-img:nth-child(4n+4){
+	flex-basis: 380px;
+}
+
+/* END gallery section styles  */
+
+/* START sidebar section styles  */
+
+.sidebar-right {
+	padding: 2em;
+	color: black;
+}
+
+.sidebar-right ul {
+	list-style-type: none;
+	padding-left: 1em;
+}
+
+.sidebar-right ul a {
+	display: block;
+	text-decoration: none;
+	padding-bottom: .4em;
+	color: black;
+	font-weight: 700;
+}
+
+.widget {
+	background-color: white;
+	margin-bottom: 2em;
+}
+
+.widget-content {
+	padding: .5em 2em;
+}
+
+@media screen and (min-width: 810px) and (max-width: 1120px) {
+	
+	.sidebar-right {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.widget {
+		flex-basis: 48%;
+	}
+}
+/* END sidebar section styles  */
